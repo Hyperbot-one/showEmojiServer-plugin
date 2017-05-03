@@ -21,7 +21,9 @@ class showEmojiServer {
 		
 		$('.channel-textarea-emoji').trigger("click");
 		setTimeout(function(){$('#bda-qem-emojis').trigger("click");}, 500);
-		setTimeout(function(){$('.emoji-picker .scroller').css("height","18000px");}, 1000);
+		var height = $('.emoji-picker .scroller-wrap .scroller>div:last-child').height();
+		console.log("height " + height);
+		setTimeout(function(){$('.emoji-picker .scroller').css("height",height);}, 1000);
 		setTimeout(function(){$('.categories .custom').trigger("click");}, 2000);
 		setTimeout(function(){
 			console.log("loading Emojis");
@@ -43,7 +45,7 @@ class showEmojiServer {
 				}
 			});
 			$('.channel-textarea-emoji').trigger("click");	
-		}, 3000);
+		}, 4000);
 	}
 	
 	stop(){
