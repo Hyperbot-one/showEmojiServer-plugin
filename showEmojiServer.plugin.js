@@ -21,14 +21,14 @@ class showEmojiServer {
 		
 		$('.channel-textarea-emoji').trigger("click");
 		setTimeout(function(){$('#bda-qem-emojis').trigger("click");}, 500);
-		var height = $('.emoji-picker .scroller-wrap .scroller>div:last-child').height();
+		var height = $('.emoji-picker .ui-scroller-wrap .scroller>div:last-child').height();
 		console.log("height " + height);
 		setTimeout(function(){$('.emoji-picker .scroller').css("height",height);}, 1000);
 		setTimeout(function(){$('.categories .custom').trigger("click");}, 2000);
 		setTimeout(function(){
 			console.log("loading Emojis");
 			var currentServer = "";
-			$('.emoji-picker .scroller-wrap .scroller>div').each(function(){
+			$('.emoji-picker .ui-scroller-wrap .scroller>div').each(function(){
 				if(!$(this).length){
 					console.log("error element dne");
 					return;
