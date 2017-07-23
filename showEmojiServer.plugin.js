@@ -19,7 +19,7 @@ class showEmojiServer {
 		var emojiMap = this.emojiMap;
 		this.hoverEmoji();
 		
-		$('.channel-textarea-emoji').trigger("click");
+		$('.emojiButton-38mF6t').trigger("click");
 		setTimeout(function(){$('#bda-qem-emojis').trigger("click");}, 500);
 		var height = $('.emoji-picker .scroller-wrap .scroller>div:last-child').height();
 		console.log("height " + height);
@@ -44,7 +44,7 @@ class showEmojiServer {
 					});
 				}
 			});
-			$('.channel-textarea-emoji').trigger("click");	
+			$('.emojiButton-38mF6t').trigger("click");	
 		}, 4000);
 	}
 	
