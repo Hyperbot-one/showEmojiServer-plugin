@@ -19,23 +19,23 @@ class showEmojiServer {
 		var emojiMap = this.emojiMap;
 		this.hoverEmoji();
 		
-		$('.emojiButton-38mF6t').trigger("click");
-		setTimeout(function(){$('#bda-qem-emojis').trigger("click");}, 500);
-		var height = $('.emoji-picker .scroller-wrap .scroller>div:last-child').height();
+		$('.emojiButton-3c_qrT').trigger("click");
+		//setTimeout(function(){$('.emojiButtonNormal-2yO7yT').trigger("click");}, 500);
+		var height = $('.emojiPicker-3g68GS .scrollerWrap-2uBjct .scroller-fzNley>div:last-child').height();
 		console.log("height " + height);
-		setTimeout(function(){$('.emoji-picker .scroller').css("height",height);}, 1000);
-		setTimeout(function(){$('.categories .custom').trigger("click");}, 2000);
+		setTimeout(function(){$('.emojiPicker-3g68GS .scroller-fzNley').css("height",height);}, 1000);
+		setTimeout(function(){$('.categories-jw8z2h .custom-mQFmND').trigger("click");}, 2000);
 		setTimeout(function(){
 			console.log("loading Emojis");
 			var currentServer = "";
-			$('.emoji-picker .scroller-wrap .scroller>div').each(function(){
+			$('.emojiPicker-3g68GS .scrollerWrap-2uBjct .scroller-fzNley>div').each(function(){
 				if(!$(this).length){
 					console.log("error element dne");
 					return;
 				}
-				if($(this).hasClass("category")) currentServer = $(this).text();
+				if($(this).hasClass("category-3rCtoh")) currentServer = $(this).text();
 				console.log("currentServer: " + currentServer);
-				if($(this).hasClass("row") && currentServer != "Frequently Used"){
+				if($(this).hasClass("row-OcLAIW") && currentServer != "Frequently Used"){
 					$(this).children().each(function(){
 						let bg = $(this).css("background-image");
 						bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
@@ -44,7 +44,8 @@ class showEmojiServer {
 					});
 				}
 			});
-			$('.emojiButton-38mF6t').trigger("click");	
+			//$('.channel-textarea-emoji').trigger("click");
+			$('.emojiButton-3c_qrT').trigger("click");			
 		}, 4000);
 	}
 	
